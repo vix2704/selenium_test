@@ -1,0 +1,25 @@
+#Q14-->
+import xlrd
+wb = xlrd.open_workbook("test1.xlsx")
+sheet = wb.sheet_by_index(0)
+for i in range(sheet.nrows):
+    print(sheet.row_values(i))
+
+#Q15-->
+#by using attribute
+driver.find_element(By.XPATH,"//tag[@attribute='value']")
+#by using text
+driver.find_element(By.XPATH,"//tag[text()='value']")
+#by using group indexing
+driver.find_element(By.XPATH,"(//tag[@attribute='value'])[1]")
+#by using contains
+driver.find_element(By.XPATH,"//tag[contains(@attribute,'value')]")
+
+1. Which locator is generally the fastest in Selenium?
+2. Which wait is recommended for handling dynamic elements in Selenium?
+3. Which Selenium class is used to handle dropdown listboxes?
+
+Answers->
+1. ID
+2. Explicit Wait (WebDriverWait) 
+3. Select 
